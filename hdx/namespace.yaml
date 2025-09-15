@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: hyperdx
+  labels:
+    app.kubernetes.io/component: hyperdx
+    pod-security.kubernetes.io/enforce: privileged
