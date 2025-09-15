@@ -86,6 +86,29 @@ spec:
           {
             "from": {
               "databaseName": "default",
+              "tableName": "otel_logs"
+            },
+            "kind": "log",
+            "timestampValueExpression": "TimestampTime",
+            "name": "Logs",
+            "displayedTimestampValueExpression": "Timestamp",
+            "implicitColumnExpression": "Body",
+            "serviceNameExpression": "ServiceName",
+            "bodyExpression": "Body",
+            "eventAttributesExpression": "LogAttributes",
+            "resourceAttributesExpression": "ResourceAttributes",
+            "defaultTableSelectExpression": "Timestamp,ServiceName,SeverityText,Body",
+            "severityTextExpression": "SeverityText",
+            "traceIdExpression": "TraceId",
+            "spanIdExpression": "SpanId",
+            "connection": "ClickHouse Cloud",
+            "traceSourceId": "Traces",
+            "sessionSourceId": "Sessions",
+            "metricSourceId": "Metrics"
+          },
+          {
+            "from": {
+              "databaseName": "default",
               "tableName": "otel_traces"
             },
             "kind": "trace",
