@@ -5,6 +5,7 @@ resources:
   - namespace.yaml
   - repository.yaml
   - release.yaml
+  - local-path-storage.yaml
 
 # configurations:
 #   - kustomizeconfig.yaml
