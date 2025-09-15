@@ -1,0 +1,26 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: OCIRepository
+metadata:
+  name: emissary-crds
+spec:
+  interval: 1h
+  url: oci://ghcr.io/emissary-ingress/emissary-crds-chart
+  ref:
+    semver: "3.10.x"
+  layerSelector:
+    mediaType: "application/vnd.cncf.helm.chart.content.v1.tar+gzip"
+    operation: copy
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: OCIRepository
+metadata:
+  name: emissary-ingress
+spec:
+  interval: 1h
+  url: oci://ghcr.io/emissary-ingress/emissary-ingress
+  ref:
+    semver: "3.10.x"
+  layerSelector:
+    mediaType: "application/vnd.cncf.helm.chart.content.v1.tar+gzip"
+    operation: copy
