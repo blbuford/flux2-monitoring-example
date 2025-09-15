@@ -44,7 +44,7 @@ spec:
         [
           {
             "name": "ClickHouse Cloud",
-            "host": "https://fcb9wwgxlj.us-east-1.aws.clickhouse.cloud",
+            "host": "https://fcb9wwgxlj.us-east-1.aws.clickhouse.cloud:8443",
             "port": 8443,
             "username": "default",
             "password": "Jf_WwIHq6P_~."
