@@ -14,6 +14,8 @@ spec:
     crds: CreateReplace
   driftDetection:
     mode: enabled
+  values:
+    enableLegacyVersions: false
 
  
 ---
@@ -26,6 +28,8 @@ spec:
   chartRef:
     kind: OCIRepository
     name: emissary-ingress
+  dependsOn:
+    - name: emissary-crds
   install:
     crds: Create
   upgrade:
